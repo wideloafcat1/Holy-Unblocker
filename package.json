@@ -8,7 +8,7 @@
     "node": "22"
   },
   "scripts": {
-    "fresh-install": "npm cache verify && npm update && npm ci && cd lib/rammerhead && npm ci",
+    "fresh-install": "npm cache verify && npm update && npm ci && npm --prefix lib/rammerhead install",
     "fresh-start": "npm run fresh-install && npm start",
     "start": "npm stop && npm run build && npm run manual-start",
     "restart": "node run-command.mjs stop start",
@@ -16,7 +16,7 @@
     "test": "npm run proxy-validator",
     "manual-start": "node run-command.mjs start",
     "kill": "node run-command.mjs stop kill",
-    "build": "node run-command.mjs build && npm --prefix lib/rammerhead install && npm --prefix lib/rammerhead run build"
+    "build": "node run-command.mjs build && npm --prefix lib/rammerhead run build",
     "clear": "node run-command.mjs clean",
     "clean": "node run-command.mjs clean format",
     "proxy-validator": "node proxyServiceValidator.js",
@@ -30,25 +30,24 @@
   ],
   "author": "Titanium Network",
   "license": "GNU AFFERO",
- "dependencies": {
-  "@fastify/helmet": "^13.0.1",
-  "@fastify/static": "^8.2.0",
-  "@mercuryworkshop/bare-mux": "^2.1.7",
-  "@mercuryworkshop/epoxy-transport": "^2.1.28",
-  "@mercuryworkshop/libcurl-transport": "^1.5.0",
-  "@mercuryworkshop/scramjet": "1.0.2",
-  "@titaniumnetwork-dev/ultraviolet": "^3.2.10",
-  "axios": "^1.11.0",
-  "chii": "^1.15.5",
-  "fastify": "^5.5.0",
-  "pm2": "^6.0.8",
-  "puppeteer": "^24.17.0",
-  "wisp-server-node": "^1.1.7",
-  "ws": "^8.18.3",
-  "utf-8-validate": "^5.0.2",
-  "dotenv-flow": "^3.2.0"
-}
-
+  "dependencies": {
+    "@fastify/helmet": "^13.0.1",
+    "@fastify/static": "^8.2.0",
+    "@mercuryworkshop/bare-mux": "^2.1.7",
+    "@mercuryworkshop/epoxy-transport": "^2.1.28",
+    "@mercuryworkshop/libcurl-transport": "^1.5.0",
+    "@mercuryworkshop/scramjet": "1.0.2",
+    "@titaniumnetwork-dev/ultraviolet": "^3.2.10",
+    "axios": "^1.11.0",
+    "chii": "^1.15.5",
+    "fastify": "^5.5.0",
+    "pm2": "^6.0.8",
+    "puppeteer": "^24.17.0",
+    "wisp-server-node": "^1.1.7",
+    "ws": "^8.18.3",
+    "utf-8-validate": "^5.0.2",
+    "dotenv-flow": "^3.2.0"
+  },
   "devDependencies": {
     "@babel/node": "^7.28.0",
     "esbuild": "^0.25.9"
