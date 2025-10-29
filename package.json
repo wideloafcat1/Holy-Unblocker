@@ -5,7 +5,7 @@
   "description": "Holy Unblocker LTS is a web proxy service that helps you access websites that may be blocked by your network, government or policy all within your browser with no download or setup.",
   "main": "backend.js",
   "engines": {
-    "node": ">=22.0.0"
+    "node": "22"
   },
   "scripts": {
     "fresh-install": "npm cache verify && npm update && npm ci && cd lib/rammerhead && npm ci",
@@ -36,6 +36,7 @@
     "@mercuryworkshop/bare-mux": "^2.1.7",
     "@mercuryworkshop/epoxy-transport": "^2.1.28",
     "@mercuryworkshop/libcurl-transport": "^1.5.0",
+    "@mercuryworkshop/scramjet": "1.0.2",
     "@titaniumnetwork-dev/ultraviolet": "^3.2.10",
     "axios": "^1.11.0",
     "chii": "^1.15.5",
